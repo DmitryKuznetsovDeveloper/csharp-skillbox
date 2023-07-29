@@ -1,0 +1,15 @@
+C:\Users\User\Desktop\MyCode\Csharp_Homework\csharp-skillbox\PracticalWork001\PracticalWork001\bin\Debug\net6.0\PracticalWork001.exe
+C:\Users\User\Desktop\MyCode\Csharp_Homework\csharp-skillbox\PracticalWork001\PracticalWork001\bin\Debug\net6.0\PracticalWork001.deps.json
+C:\Users\User\Desktop\MyCode\Csharp_Homework\csharp-skillbox\PracticalWork001\PracticalWork001\bin\Debug\net6.0\PracticalWork001.runtimeconfig.json
+C:\Users\User\Desktop\MyCode\Csharp_Homework\csharp-skillbox\PracticalWork001\PracticalWork001\bin\Debug\net6.0\PracticalWork001.dll
+C:\Users\User\Desktop\MyCode\Csharp_Homework\csharp-skillbox\PracticalWork001\PracticalWork001\bin\Debug\net6.0\PracticalWork001.pdb
+C:\Users\User\Desktop\MyCode\Csharp_Homework\csharp-skillbox\PracticalWork001\PracticalWork001\obj\Debug\net6.0\PracticalWork001.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\MyCode\Csharp_Homework\csharp-skillbox\PracticalWork001\PracticalWork001\obj\Debug\net6.0\PracticalWork001.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\MyCode\Csharp_Homework\csharp-skillbox\PracticalWork001\PracticalWork001\obj\Debug\net6.0\PracticalWork001.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\MyCode\Csharp_Homework\csharp-skillbox\PracticalWork001\PracticalWork001\obj\Debug\net6.0\PracticalWork001.AssemblyInfo.cs
+C:\Users\User\Desktop\MyCode\Csharp_Homework\csharp-skillbox\PracticalWork001\PracticalWork001\obj\Debug\net6.0\PracticalWork001.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\MyCode\Csharp_Homework\csharp-skillbox\PracticalWork001\PracticalWork001\obj\Debug\net6.0\PracticalWork001.dll
+C:\Users\User\Desktop\MyCode\Csharp_Homework\csharp-skillbox\PracticalWork001\PracticalWork001\obj\Debug\net6.0\refint\PracticalWork001.dll
+C:\Users\User\Desktop\MyCode\Csharp_Homework\csharp-skillbox\PracticalWork001\PracticalWork001\obj\Debug\net6.0\PracticalWork001.pdb
+C:\Users\User\Desktop\MyCode\Csharp_Homework\csharp-skillbox\PracticalWork001\PracticalWork001\obj\Debug\net6.0\PracticalWork001.genruntimeconfig.cache
+C:\Users\User\Desktop\MyCode\Csharp_Homework\csharp-skillbox\PracticalWork001\PracticalWork001\obj\Debug\net6.0\ref\PracticalWork001.dll
