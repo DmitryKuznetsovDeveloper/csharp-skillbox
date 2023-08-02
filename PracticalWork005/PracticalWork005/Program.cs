@@ -2,11 +2,11 @@
 {
     internal class Program
     {
-        public static string[] SplitText(string text, char separator) => text.Split(separator);
+        public static string[] SplitText(string text) => text.Split(' ');
 
         public static string Reverse(string text)
         {
-            string[] temp = SplitText(text, ' ');
+            string[] temp = SplitText(text);
             Array.Reverse(temp);
             return string.Join(" ", temp);
         }
@@ -17,7 +17,7 @@
             Console.Write("введите сообщение -> ");
             string userInputFirst = Console.ReadLine();
             Console.WriteLine(userInputFirst);
-            string[] messageFirst = SplitText(userInputFirst,' ');
+            string[] messageFirst = SplitText(userInputFirst);
             Console.WriteLine(string.Join("\n", messageFirst));
             
             //Задание 2. Перестановка слов в предложении
