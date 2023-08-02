@@ -38,7 +38,7 @@ public class Worker : IWorker
         FullName = fullName ;
         Age = age;
         Height = height;
-        BirthDay = birthDay;
+        BirthDay = birthDay.Date;
         PlaceOfBirth = placeOfBirth;
     }
     
@@ -50,6 +50,6 @@ public class Worker : IWorker
     public override string ToString() => $"\nFull Name: {FullName}\n" +
                                          $"Age: {Age}\n" +
                                          $"Height: {Height}\n" +
-                                         $"BirthDay: {BirthDay}\n" +
+                                         $"BirthDay: {BirthDay.ToString("d")}\n" +
                                          $"PlaceOfBirth: {PlaceOfBirth}\n";
 }

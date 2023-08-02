@@ -1,14 +1,14 @@
-﻿namespace PracticalWork006
+﻿using PracticalWork006.Interface;
+
+namespace PracticalWork006
 {
     internal class Program
     {
         public static void Main(string[] args)
         {
-            ControllerNotebook controllerNotebook = new ControllerNotebook(); 
-            //controllerNotebook.AddedNoteWorker();
-            Console.WriteLine();
-            controllerNotebook.PrintAllWorker();
+            IView view = new View();
+            ControllerNotebook controllerNotebook = new ControllerNotebook(view);
+            controllerNotebook.Start();
         }
     }
 }
-

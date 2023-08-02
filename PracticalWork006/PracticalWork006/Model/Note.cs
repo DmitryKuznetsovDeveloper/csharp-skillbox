@@ -24,6 +24,6 @@ public class Note : INote
     }
 
     public override string ToString() => $"\nID: {Id}\n" +
-                                         $"Date and time the entry was added: {DateTimeEntryWasAdded}" +
+                                         $"Date and time the entry was added: {DateTimeEntryWasAdded.ToString("g")}" +
                                          $"{Worker}\n";
 }
