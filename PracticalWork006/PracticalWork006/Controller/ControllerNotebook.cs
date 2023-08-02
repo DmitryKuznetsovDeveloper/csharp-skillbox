@@ -104,8 +104,6 @@ public class ControllerNotebook : INotebook
             writer.WriteLine($"{note.Id}#{note.DateTimeEntryWasAdded}#{note.Worker.FullName}#" +
                              $"{note.Worker.Age}#{note.Worker.Height}#{note.Worker.BirthDay.ToString("d")}#" +
                              $"{note.Worker.PlaceOfBirth}");
-            writer.Flush();
-            writer.Close();
         }
         ListNotes.Add(note);
     }
