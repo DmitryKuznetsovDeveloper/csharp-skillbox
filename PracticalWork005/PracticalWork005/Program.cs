@@ -2,6 +2,14 @@
 {
     internal class Program
     {
+        public static string[] SplitText(string text, char separator) => text.Split(separator);
+
+        public static string Reverse(string text)
+        {
+            string[] temp = SplitText(text, ' ');
+            Array.Reverse(temp);
+            return string.Join(" ", temp);
+        }
         public static void Main(string[] args)
         {
             //Задание 1. Метод разделения строки на слова
@@ -9,7 +17,7 @@
             Console.Write("введите сообщение -> ");
             string userInputFirst = Console.ReadLine();
             Console.WriteLine(userInputFirst);
-            string[] messageFirst = userInputFirst.Split();
+            string[] messageFirst = SplitText(userInputFirst,' ');
             Console.WriteLine(string.Join("\n", messageFirst));
             
             //Задание 2. Перестановка слов в предложении
@@ -17,9 +25,7 @@
             Console.Write("введите сообщение -> ");
             string userInputSecond = Console.ReadLine();
             Console.WriteLine(userInputSecond);
-            string[] messageSecond = userInputSecond.Split();
-            Array.Reverse(messageSecond);
-            Console.WriteLine(string.Join(" ", messageSecond));
+            Console.WriteLine(Reverse(userInputSecond));
         }
     }
 }
