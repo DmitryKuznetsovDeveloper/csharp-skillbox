@@ -79,6 +79,9 @@ public class ControllerNotebook : INotebook
         }
     }
 
+    /// <summary>
+    /// Обновление исходного файла, к примеру при удалении из программы сотрудника
+    /// </summary>
     private void UpdateFile()
     {
         using (StreamWriter writer = new StreamWriter(PathFileWorkers))
@@ -104,8 +107,9 @@ public class ControllerNotebook : INotebook
         CheckPathDirectoryWorkers();
         CheckPathFileWorkers();
     }
-
+    
     #region Различные методы для работы 
+    
     /// <summary>
     /// Записать в файл
     /// </summary>
@@ -133,6 +137,11 @@ public class ControllerNotebook : INotebook
         }
         Console.WriteLine(new string('=',100));
     }
+    
+    /// <summary>
+    /// Перегрузка метода, для вывода отфильтрованного списка работников
+    /// </summary>
+    /// <param name="list">список работников</param>
     private void PrintAllWorker(List<INote> list)
     {
         Console.WriteLine(new string('=',100));
@@ -143,8 +152,17 @@ public class ControllerNotebook : INotebook
         Console.WriteLine(new string('=',100));
     }
 
+    /// <summary>
+    /// Поиск работника по ID записки
+    /// </summary>
+    /// <param name="id">ID записки</param>
+    /// <returns>записку</returns>
     private INote GetWorkerById(long id) => ListNotes.FirstOrDefault(x => x.Id == id);
 
+    /// <summary>
+    /// Удаление работника из списка по ID записки
+    /// </summary>
+    /// <param name="id">ID записи</param>
     private void DeleteWorker(long id)
     {
         INote note = ListNotes.FirstOrDefault(x => x.Id == id);
@@ -152,9 +170,15 @@ public class ControllerNotebook : INotebook
         else Console.WriteLine(View.ErrorId);
     }
     
+    /// <summary>
+    /// Фильтр сотрудников по дате записи 
+    /// </summary>
+    /// <param name="first"> С какой даты включительно</param>
+    /// <param name="second">До какой даты включительно</param>
+    /// <returns>отфильтрованный список записи сотрудников</returns>
     private List<INote> GetWorkerByData(DateTime first, DateTime second) => ListNotes.Where(x => x.DateTimeEntryWasAdded.Date >= first.Date && x.DateTimeEntryWasAdded.Date <= second.Date).ToList();
     
-       #endregion
+    #endregion
 
     #region Старт программы
 
@@ -199,7 +223,6 @@ public class ControllerNotebook : INotebook
                     Console.WriteLine(View.SuccessfullyDelWorker);
                     break;
                 case 5:
-                    //TODO: Доделать
                     Console.Clear();
                     Console.WriteLine(View.InputUserDate);
                     Console.Write("1: ");

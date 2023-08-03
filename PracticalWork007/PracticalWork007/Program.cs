@@ -10,5 +10,6 @@ namespace PracticalWork007
             ControllerNotebook controllerNotebook = new ControllerNotebook(view);
             controllerNotebook.Start();
         }
+        
     }
 }
