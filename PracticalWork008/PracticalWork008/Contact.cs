@@ -8,15 +8,19 @@ public class Contact
     public int ApartmentNumber { get; set; }
     public string MobilePhone { get; set; }
     public string HomePhone { get; set; }
-    
-    public Contact(){}
-    public Contact(string fullName, string street, int houseNumber, int apartmentNumber, string mobilePhone, string homePhone)
+    public Contact()
     {
-        FullName = fullName;
-        Street = street;
-        HouseNumber = houseNumber;
-        ApartmentNumber = apartmentNumber;
-        MobilePhone = mobilePhone;
-        HomePhone = homePhone;
+        Console.WriteLine("Введите полное имя");
+        FullName = Console.ReadLine();
+        Console.WriteLine("Введите улицу");
+        Street = Console.ReadLine();
+        Console.WriteLine("Введите номер дома");
+        HouseNumber = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Введите номер квартиры");
+        ApartmentNumber = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Введите мобильный телефон");
+        MobilePhone = Console.ReadLine();
+        Console.WriteLine("Введите домашний телефон");
+        HomePhone = Console.ReadLine();
     }
 }

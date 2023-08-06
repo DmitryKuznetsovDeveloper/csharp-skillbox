@@ -41,8 +41,7 @@ internal class Program
         Console.WriteLine(new string('=',50));
         
         //Задание 4 Записная книжка. 
-        Contact contact = new Contact("Иванов Иван Иваныч","Улица",23,12,
-            "8999887754","495778877");
+        Contact contact = new Contact();
         MyXml myXml = new MyXml();
         myXml.SerializeContact(contact,"_contact.xml");
     }

@@ -20,8 +20,8 @@ public class MyXml
         
         person.Add(address,phones);
         person.Add(xAttributeFullName);
-        address.Add($"\n\t{xAttributeStreet}\n\t{xAttributeHouseNumber}\n\t{xAttributeFlatNumber}");
-        phones.Add($"\n\t{xAttributeMobilePhone}\n\t{xAttributeFlatPhone}");
+        address.Add($"\n\t\t{xAttributeStreet}\n\t\t{xAttributeHouseNumber}\n\t\t{xAttributeFlatNumber}\n\t");
+        phones.Add($"\n\t\t{xAttributeMobilePhone}\n\t\t{xAttributeFlatPhone}\n\t");
         person.Save(path);
         
     }
