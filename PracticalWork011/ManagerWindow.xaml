@@ -1,0 +1,77 @@
+﻿<Window x:Class="PracticalWork011.ManagerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PracticalWork011"
+        mc:Ignorable="d"
+        Title="Manager" MinHeight="600" MinWidth="1200" MaxHeight="600" MaxWidth="1200">
+    <Grid>
+        <ListView x:Name="ListClients" Margin="450,0,10,10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" Width="40" DisplayMemberBinding="{Binding Id}"/>
+                    <GridViewColumn Header="Фамилия" Width="80" DisplayMemberBinding="{Binding Client.SecondName}"/>
+                    <GridViewColumn Header="Имя" Width="80" DisplayMemberBinding="{Binding Client.Name}"/>
+                    <GridViewColumn Header="Отчество" Width="80" DisplayMemberBinding="{Binding Client.Surname}"/>
+                    <GridViewColumn Header="Телефон" Width="100" DisplayMemberBinding="{Binding Client.Phone}"/>
+                    <GridViewColumn Header="Паспорт" Width="100" DisplayMemberBinding="{Binding Client.Passport}"/>
+                    <GridViewColumn Header="Дата и время изменений" Width="150" DisplayMemberBinding="{Binding DateTimeEntryWasAdded}"/>
+                    <GridViewColumn Header="Сотрудник" Width="100" DisplayMemberBinding="{Binding ChangeInfo}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Данные Клиента на изменения: " HorizontalAlignment="Left" Margin="16,10,0,0" VerticalAlignment="Top" Width="336" Height="40" FontSize="16"
+               VerticalContentAlignment="Center" FontFamily="Arial Black"/>
+        <Button x:Name="ButtonUpdatePhone" Content="Изменить" HorizontalAlignment="Left" Margin="25,170,0,0" VerticalAlignment="Top" 
+                Width="250" Height="50"  FontSize="24" FontFamily="Segoe UI Black" Click="ButtonUpdatePhone_Click"/>
+        <Label x:Name="ID" HorizontalAlignment="Left" Margin="16,44,0,0" VerticalAlignment="Top" Width="35" Height="40" FontSize="16"
+               VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Arial Black" Content="ID:"/>
+        <Label x:Name="InfoID" HorizontalAlignment="Left" Margin="51,44,0,0" VerticalAlignment="Top" Width="77" Height="40" FontSize="16"
+               VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontFamily="Arial Black" Content="{Binding ElementName=ListClients, Path=SelectedItem.Id}"/>
+        <TextBox x:Name="TextSecondName" HorizontalAlignment="Left" Margin="24,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+                 Width="100" Height="20" FontSize="16" VerticalContentAlignment="Center" FontFamily="Arial Black"
+                 Text="{Binding ElementName=ListClients, Path=SelectedItem.Client.SecondName}"/>
+        <TextBox x:Name="TextName" HorizontalAlignment="Left" Margin="139,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+                 Width="100" Height="20" FontSize="16" VerticalContentAlignment="Center" FontFamily="Arial Black"
+                 Text="{Binding ElementName=ListClients, Path=SelectedItem.Client.Name}"/>
+        <TextBox x:Name="TextSurname" HorizontalAlignment="Left" Margin="252,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+                 Width="100" Height="20" FontSize="16" VerticalContentAlignment="Center" FontFamily="Arial Black"
+                 Text="{Binding ElementName=ListClients, Path=SelectedItem.Client.Surname}"/>
+        <TextBox x:Name="TextNewPhone" HorizontalAlignment="Left" Margin="24,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+                 Width="200" Height="20" FontSize="16" VerticalContentAlignment="Center" FontFamily="Arial Black"
+                 Text="{Binding ElementName=ListClients, Path=SelectedItem.Client.Phone}"/>
+        <TextBox x:Name="TextPassport" HorizontalAlignment="Left" Margin="25,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+                 Width="140" Height="20" FontSize="16" VerticalContentAlignment="Center" FontFamily="Arial Black"
+                 Text="{Binding ElementName=ListClients, Path=SelectedItem.Client.Passport}"/>
+
+        <TextBox x:Name="TextSecondNameAdd" HorizontalAlignment="Left" Margin="25,266,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+                 Width="100" Height="20" FontSize="16" VerticalContentAlignment="Center" FontFamily="Arial Black"
+                 Text="Фамилию"/>
+        <TextBox x:Name="TextNameAdd" HorizontalAlignment="Left" Margin="135,266,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+                 Width="100" Height="20" FontSize="16" VerticalContentAlignment="Center" FontFamily="Arial Black"
+                 Text="Имя"/>
+        <TextBox x:Name="TextSurnameAdd" HorizontalAlignment="Left" Margin="245,266,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+                 Width="100" Height="20" FontSize="16" VerticalContentAlignment="Center" FontFamily="Arial Black"
+                 Text="Отчество"/>
+        <TextBox x:Name="TextNewPhoneAdd" HorizontalAlignment="Left" Margin="25,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+                 Width="200" Height="20" FontSize="16" VerticalContentAlignment="Center" FontFamily="Arial Black"
+                 Text="Телефон"/>
+        <TextBox x:Name="TextPassportAdd" HorizontalAlignment="Left" Margin="25,326,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+                 Width="140" Height="20" FontSize="16" VerticalContentAlignment="Center" FontFamily="Arial Black"
+                 Text="Паспорт"/>
+        <Button x:Name="ButtonAddedClient" Content="Добавить" HorizontalAlignment="Left" Margin="25,366,0,0" VerticalAlignment="Top" 
+                Width="250" Height="50"  FontSize="24" FontFamily="Segoe UI Black" Click="ButtonAddedClient_Click"/>
+        <Label Content="Данные Клиента на добавление: " HorizontalAlignment="Left" Margin="25,225,0,0" VerticalAlignment="Top" Width="327" Height="40" FontSize="16"
+            VerticalContentAlignment="Center" FontFamily="Arial Black"/>
+        <Label Content="Удаление по ID : " HorizontalAlignment="Left" Margin="24,435,0,0" VerticalAlignment="Top" Width="327" Height="40" FontSize="16"
+            VerticalContentAlignment="Center" FontFamily="Arial Black"/>
+        <Label x:Name="ID_Copy" HorizontalAlignment="Left" Margin="22,475,0,0" VerticalAlignment="Top" Width="34" Height="40" FontSize="16"
+            VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Arial Black" Content="ID:"/>
+        <Label x:Name="InfoID_Copy" HorizontalAlignment="Left" Margin="56,475,0,0" VerticalAlignment="Top" Width="78" Height="40" FontSize="16"
+            VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontFamily="Arial Black" Content="{Binding SelectedItem.Id, ElementName=ListClients}"/>
+        <Button x:Name="ButtonDeleteClient" Content="Удалить" HorizontalAlignment="Left" Margin="22,520,0,0" VerticalAlignment="Top" 
+            Width="250" Height="50"  FontSize="24" FontFamily="Segoe UI Black" Click="ButtonDeleteClient_Click"/>
+
+    </Grid>
+</Window>
